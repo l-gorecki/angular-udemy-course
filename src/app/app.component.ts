@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  paragraphVisible = false;
+  buttonClicks = [];
+  toggleButton() {
+    this.paragraphVisible = !this.paragraphVisible;
+    this.buttonClicks.push(new Date());
+  }
 }
