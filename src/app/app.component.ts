@@ -9,7 +9,4 @@ export class AppComponent {
   title = 'app';
   selectedMenuItem = 'recipe';
 
-  onMenuSelected(menu: string) {
-    this.selectedMenuItem = menu;
-  }
 }
