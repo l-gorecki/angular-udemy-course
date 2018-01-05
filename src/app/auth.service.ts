@@ -16,12 +16,10 @@ export class AuthService {
   }
 
   login() {
-    console.log('logged');
     this.loggredIn = true;
   }
 
   logout() {
-    console.log('off');
     this.loggredIn = false;
   }
   constructor() { }

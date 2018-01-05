@@ -8,6 +8,7 @@ import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgModule } from '@angular/core';
+import { CanDeactivateGuardService } from './servers/edit-server/can-deactivate-guard.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
     component: ServersComponent,
     children: [
     { path: ':id', component: ServerComponent },
-    { path: ':id/edit', component: EditServerComponent },
+    { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuardService] },
   ]},
   { path: 'users', component: UsersComponent, children: [
     { path: ':id/:name', component: UserComponent },
